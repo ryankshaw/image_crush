@@ -12,7 +12,14 @@ ic.extend ImageCrush::Messages
 
 # they can pass 0, 1, or 2 arguments.
 # if 0 then crush images for this entire directory
-if ARGV.empty?
+if ARGV.empty? || %w(--help -h).include? ARGV.first
+  puts "Usage: image_crush [directory_or_file_name] \n"
+  puts "ex: \n"
+  puts "image_crush bloatedimage.png \n"
+  puts "image_crush public/images <-- for a rails app, at the RAILS_ROOT directory"
+  exit(0)
+end
+if ARGV.empty? || ARGV.length
   ic.crush('.')
 # if 1 then just image crush that thing, it could be a directory or a file
 elsif ARGV.length == 1
