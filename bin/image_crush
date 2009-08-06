@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+
+require 'rubygems'
+require 'ruby-debug'
+require 'image_crush'
+
+debugger
+ARGV.first
+
+# they can pass 0, 1, or 2 arguments.
+# if 0 then crush images for this entire directory
+# if 1 then just image crush that thing, it could be a directory or a file 
+# if 2 then crush argv[0] and name it arg[0]
+
+
+ic = ImageCrush::Base.new
+ic.extend ImageCrush::Messages
+ic.crush(File.join(RAILS_ROOT, 'public', 'images'))
