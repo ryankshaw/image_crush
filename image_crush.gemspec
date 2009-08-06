@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{image_crush}
-  s.version = "0.0.0"
+  s.version = "0.0.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Ryan Shaw"]
@@ -26,6 +26,7 @@ Gem::Specification.new do |s|
      "Rakefile",
      "VERSION",
      "bin/image_crush",
+     "image_crush.gemspec",
      "lib/image_crush.rb",
      "lib/image_crush/base.rb",
      "lib/image_crush/jpegtran.rb",
