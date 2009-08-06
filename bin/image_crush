@@ -2,7 +2,7 @@
 require 'rubygems'
 require 'image_crush'
 
-if ARGV.empty? || %w(--help -h).include? ARGV.first
+if ( ARGV.empty? || (%w(--help -h).include? ARGV.first) )
   puts "Usage: image_crush [directory_or_file_name] \n"
   puts "ex: \n"
   puts "image_crush bloatedimage.png \n"
