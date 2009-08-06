@@ -11,6 +11,7 @@ to get <b>+pngcrush+</b> on a mac with macports just do:
   sudo port install pngcrush
 or on a system with apt (like ubuntu)
   apt-get install pngcrush
+and to get +jpegtran+
   apt-get install libjpeg-progs
   
 This will help you install jpegtran from source for macs or Unix/linux
